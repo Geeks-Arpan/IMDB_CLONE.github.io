@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body{
+   
+    margin: 80px 0px 60px 0px;
+   
+
+    min-height: 100vh;
+    width: 100%;
+   
+    background: rgb(23, 23, 23);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header{
+    position: relative;
+    width: 85%;
+    height: 90%;
+    /*border: 1px solid #fff;*/
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 10px 25px -8px #000;
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px 0px 100px;
+    margin-top: 10px;
+    
+    
+}
+
+#navigation span{
+    font-size: 20px;
+    cursor: pointer;
+    color: #fff;
+}
+
+#title h1{
+    margin: 0;
+    font-size: 40px;
+    color: #fff;
+}
+
+#movies-container{
+    margin: 100px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    position: relative;
+    
+}
+
+.card{
+    position: relative;
+    width: 320px;
+    height: 450px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    overflow: hidden;
+}
+
+.card .poster{
+    position: relative;
+}
+
+.card .poster::before{
+    content: '';
+    position: absolute;
+    bottom: -140px;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(0deg,#4f5355 50%, transparent);
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.card:hover .poster::before{
+    bottom: 0px;
+}
+
+.card .poster img{
+    width: 100%;
+    height: 450px;
+    transition: 0.5s;
+}
+
+.card:hover .poster img{
+    transform: translateY(-50px);
+    filter: blur(5px);
+}
+
+.card .details{
+    position: absolute;
+    width: 100%;
+    height: 350px;
+    bottom: -250px;
+    left: 0;
+    padding: 20px;
+    z-index: 3;
+    transition: 0.5s;
+}
+
+.card:hover .details{
+    bottom: 0px;
+}
+
+.card .details .title{
+    font-size: 30px;
+    text-transform: capitalize;
+    color: #fff;
+    opacity: 0.8;
+    width: 90%;
+}
+
+.card .details .director{
+    color: #fff;
+    opacity: 0.5;
+    font-size: 12px;
+    width: 90%;
+}
+
+.card .details .rating{
+    margin: 10px 0;
+    padding: 5px 0;
+}
+
+.card .details .rating .fa-solid,
+.card .details .rating .fa-regular{
+    color: #fff;
+    opacity: 0.5;
+}
+
+.card .details .rating span{
+    margin-left: 10px;
+    color: #fff;
+    opacity: 0.4;
+}
+
+.card .details .tags span{
+    padding: 5px;
+    margin-right: 2px;
+    background-color: #aeb6bb;
+    border-radius: 5px;
+}
+
+.card .details .review{
+    margin-top: 10px;
+    color: #fff;
+    width: 90%;
+}
+
+.fav{
+    cursor: pointer;
+    position: relative;
+    top: 20px;
+    right: 80px;
+    font-size: 30px;
+    height: 30px;
+}
+
+.fa-regular{
+    color: #fff;
+}
+
+.fa-solid{
+    color: red;
+}
+
+#loading-wrapper{
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 12;
+    font-size: 24px;
+}
+
+#loading-wrapper p{
+    cursor: pointer;
+}
